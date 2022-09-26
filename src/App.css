@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+body {
+  background-color: azure;
+  padding-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator {
+  border: none;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #191b28;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 20px;
+  height: 300px;
+  width: 400px;
+}
+.calculator-hide {
+  display: none;
+}
+.cal-log {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  height: 300px;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #59ce8f;
+}
+.cal-log-show {
+  display: flex;
+}
+.cal-log > textarea {
+  resize: none;
+  height: 250px;
+  width: 350px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.cal-result {
+  display: flex;
+  flex-direction: column;
+}
+.cal-log > input {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.text-area {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.input-field {
+  font-family: "Scientific Calculator LCD", sans-serif;
+  width: 300px;
+  height: 70px;
+  border: none;
+  border-radius: 25px;
+}
+
+.clear-btn {
+  border: none;
+  border-radius: 10px;
+  background-color: #eb1d36;
   color: white;
+  width: 70px;
+  height: 65;
+  margin: 0 2px 0 2px;
+}
+.clear-btn:hover {
+  transition: 0.3s;
+  opacity: 0.9;
+  background-color: #c21010;
+}
+.btn-row {
+  padding: 5px 0 5px 0;
+}
+.btn-row > input {
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  width: 70px;
+  height: 30px;
+  margin: 1px;
+}
+.btn-row > input:hover {
+  transition: 0.3s;
+  opacity: 0.9;
+  background-color: #8758ff;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #59ce8f;
+    padding-top: 50%;
   }
-  to {
-    transform: rotate(360deg);
+  /* .container {
+    width: 370px; 
+    height: 355px;
+  } */
+  .calculator {
+    align-items: center;
+    padding-left: 0px;
+  }
+  .input-field {
+    width: 225px;
+  }
+  .clear-btn {
+    width: 55px;
+  }
+  .cal-log {
+    margin: 0;
+  }
+  .cal-log {
+    margin-right: 10px;
   }
 }
